@@ -25,3 +25,10 @@
 (use-package julia-mode :ensure t)
 (use-package magit :ensure t
   :bind (("C-c m" . magit-status)))
+(use-package swiper
+  :ensure t
+  :init (progn
+	  (ivy-mode 1)
+	  (setq ivy-use-virtual-buffers t))
+  :bind (("C-s" . swiper)
+	 ("C-r" . swiper)))
